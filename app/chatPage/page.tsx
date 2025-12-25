@@ -153,7 +153,7 @@ export default function ChatPage() {
       if (phaseTask.getIsStarted()) return
       console.log('onTaskPlan12345', taskPlan)
       taskPlan.phases.forEach((phase: any) => {
-        phase.duration = 2
+        phase.duration = 10
       })
       setTaskPlan(taskPlan)
       const phasesText = taskPlan?.phases
