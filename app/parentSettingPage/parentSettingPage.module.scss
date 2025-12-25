@@ -1,0 +1,275 @@
+.settingPage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(211deg, rgba(182, 234, 254, 1) 2%, rgba(252, 252, 254, 1) 97%);
+  padding: 0 20px;
+}
+
+.titleContainer {
+  margin-top: 78px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.titleImage {
+  width: 221px;
+  height: auto;
+  object-fit: contain;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.required {
+  color: #B159F9;
+  margin-right: 4px;
+}
+
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown {
+  width: 70%;
+  height: 34px;
+  background: #EBF8FF;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5.7px 0px rgba(91, 104, 253, 0.06);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(91, 104, 253, 0.2);
+  }
+}
+
+.selectedValue {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  color: #000000;
+}
+
+.placeholder {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.dropdownIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  width: 75%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+  animation: fadeInDown 0.2s ease-out;
+  // 去掉滚动条
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.dropdownItem {
+  padding: 12px 16px;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  
+  &:hover {
+    background: #F5F5F5;
+  }
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid #F0F0F0;
+  }
+}
+
+.radioGroup {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.radioInput {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #AC92FF;
+  
+  &:checked + .radioLabel {
+    color: #000000;
+    font-weight: 500;
+  }
+}
+
+.radioLabel {
+  font-family: 'Source Han Sans CN', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  color: rgba(0, 0, 0, 0.9);
+  user-select: none;
+}
+
+.timeDisplay {
+  width: 70%;
+  height: 34px;
+  background: #EBF8FF;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-shadow: 0px 0px 5.7px 0px rgba(91, 104, 253, 0.06);
+}
+
+.timeText {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.timeIcon {
+  width: 16px;
+  height: 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.buttonContainer {
+  width: 100%;
+  max-width: 212px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.submitButton {
+  width: 100%;
+  height: 62px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s ease;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.buttonImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 移动端适配
+@media (max-width: 375px) {
+  .formContainer {
+    max-width: 100%;
+  }
+  
+  .titleContainer {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 30px;
+  }
+}
+
